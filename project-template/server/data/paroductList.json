@@ -1,0 +1,693 @@
+{
+    "info": {
+        "email": "demo@baiqishi.com"
+    },
+    "privilege": {
+        "allow": true
+    },
+    "products": [
+        {
+            "type": "fraud",
+            "name": "反欺诈云",
+            "expandLogo": "/statics/images/logo-fanqizha.png",
+            "collapseLogo": "/statics/images/logo-collapse.png"
+        },
+        {
+            "type": "zx",
+            "name": "资信云",
+            "expandLogo": "/statics/images/logo-zixin.png",
+            "collapseLogo": "/statics/images/logo-collapse.png"
+        },
+        {
+            "type": "demo",
+            "name": "演示组件",
+            "expandLogo": "",
+            "collapseLogo": "/statics/images/logo-collapse.png"
+        }
+    ],
+    "menus": [
+        {
+            "menuDisplayOrder": 1,
+            "menuCode": "helper.function",
+            "name": "操作手册",
+            "menuId": "051f735e947f4ac18b4df581dc0299af",
+            "isLeaf": 1,
+            "parentId": "67c74272b18a4254b7bc1f010a15f14e",
+            "productType": "fraud",
+            "url": "/helper/function"
+        },
+        {
+            "menuDisplayOrder": 1,
+            "menuCode": "ams.app",
+            "name": "应用管理",
+            "menuId": "2caf3275f73811e5918600ffa2d7169d",
+            "isLeaf": 1,
+            "parentId": "2ca9d807f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/ams/app"
+        },
+        {
+            "menuDisplayOrder": 1,
+            "menuCode": "control.eventtrend",
+            "name": "事件大盘",
+            "menuId": "2cb89d5ff73811e5918600ffa2d7169d",
+            "isLeaf": 1,
+            "icon": "",
+            "parentId": "2cb186f6f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/control/eventtrend2",
+            "target": "_self"
+        },
+        {
+            "menuDisplayOrder": 1,
+            "menuCode": "ams",
+            "name": "管理中心",
+            "menuId": "2ca9d807f73811e5918600ffa2d7169d",
+            "isLeaf": 0,
+            "icon": "user-admin",
+            "parentId": "0",
+            "productType": "fraud",
+            "url": "/ams/"
+        },
+        {
+            "menuDisplayOrder": 1,
+            "menuCode": "dvp.rulehit",
+            "name": "规则击中排行",
+            "menuId": "0eb62b052bd940aea5c0daf6d7094873",
+            "isLeaf": 1,
+            "parentId": "2cbf5525f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/dvp/rulehit"
+        },
+        {
+            "menuDisplayOrder": 1,
+            "menuCode": "crn.topology",
+            "name": "关系网络",
+            "menuId": "1ff1be37d38d4f4f90795514375780ac",
+            "isLeaf": 1,
+            "parentId": "4926175f557e4cfb9a82cdc8fcdd644f",
+            "productType": "fraud",
+            "url": "/crn/topology"
+        },
+        {
+            "menuDisplayOrder": 1,
+            "menuCode": "strategy.strgyset",
+            "name": "规则策略",
+            "menuId": "2cbd37b7f73811e5918600ffa2d7169d",
+            "isLeaf": 1,
+            "parentId": "2cbb06f9f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/strategy/strgyset"
+        },
+        {
+            "menuDisplayOrder": 2,
+            "menuCode": "control.riskmap.usermap",
+            "name": "用户活动地图",
+            "menuId": "2cd65982f73811e5918600ffa2d7169d",
+            "isLeaf": 1,
+            "icon": "",
+            "parentId": "2cbf5525f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/control/riskmap2/usermap",
+            "target": "_blank"
+        },
+        {
+            "menuDisplayOrder": 2,
+            "menuCode": "helper.guide",
+            "name": "新手指引",
+            "menuId": "4fe13af8734549f08627a4e487e7aa21",
+            "isLeaf": 1,
+            "parentId": "67c74272b18a4254b7bc1f010a15f14e",
+            "productType": "fraud",
+            "url": "/helper/guide"
+        },
+        {
+            "menuDisplayOrder": 2,
+            "menuCode": "control.fieldtype",
+            "name": "字段管理",
+            "menuId": "3233a31f553548668925abd02f62361a",
+            "isLeaf": 1,
+            "parentId": "2cbb06f9f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/control/fieldtype"
+        },
+        {
+            "menuDisplayOrder": 2,
+            "menuCode": "ams.user",
+            "name": "用户管理",
+            "menuId": "2cacec75f73811e5918600ffa2d7169d",
+            "isLeaf": 1,
+            "parentId": "2ca9d807f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/ams/user"
+        },
+        {
+            "menuDisplayOrder": 2,
+            "menuCode": "control.eventcenter",
+            "name": "事件历史",
+            "menuId": "2ccf83e8f73811e5918600ffa2d7169d",
+            "isLeaf": 1,
+            "icon": "",
+            "parentId": "2cb186f6f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/control/eventcenter2",
+            "target": "_self"
+        },
+        {
+            "menuDisplayOrder": 2,
+            "menuCode": "control",
+            "name": "控制中心",
+            "menuId": "2cb186f6f73811e5918600ffa2d7169d",
+            "isLeaf": 0,
+            "icon": "control",
+            "parentId": "0",
+            "productType": "fraud",
+            "url": "/control/",
+            "target": "_self"
+        },
+        {
+            "menuDisplayOrder": 3,
+            "menuCode": "strategy.strgytemp",
+            "name": "自定义模板",
+            "menuId": "1a19b467bd9b41eeb762796fcbf73832",
+            "isLeaf": 1,
+            "parentId": "2cbb06f9f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/strategy/strgytemp"
+        },
+        {
+            "menuDisplayOrder": 3,
+            "menuCode": "ams.role",
+            "name": "角色管理",
+            "menuId": "2caf4975f73811e5918600ffa2d7169d",
+            "isLeaf": 1,
+            "parentId": "2ca9d807f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/ams/role"
+        },
+        {
+            "menuDisplayOrder": 3,
+            "menuCode": "control.riskmap.riskmap",
+            "name": "风险分布地图",
+            "menuId": "2cd8a13ef73811e5918600ffa2d7169d",
+            "isLeaf": 1,
+            "icon": "",
+            "parentId": "2cbf5525f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/control/riskmap2/riskmap",
+            "target": "_blank"
+        },
+        {
+            "menuDisplayOrder": 3,
+            "menuCode": "control.event",
+            "name": "事件分析",
+            "menuId": "589ff3622015456483e370939df0e193",
+            "isLeaf": 1,
+            "parentId": "2cb186f6f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/control/event"
+        },
+        {
+            "menuDisplayOrder": 3,
+            "menuCode": "strategy",
+            "name": "策略中心",
+            "menuId": "2cbb06f9f73811e5918600ffa2d7169d",
+            "isLeaf": 0,
+            "icon": "strategy",
+            "parentId": "0",
+            "productType": "fraud",
+            "url": "/strategy/"
+        },
+        {
+            "menuDisplayOrder": 3,
+            "menuCode": "helper.docs",
+            "name": "技术文档",
+            "menuId": "a868332971a24285bf03e2422108c5f9",
+            "isLeaf": 1,
+            "parentId": "67c74272b18a4254b7bc1f010a15f14e",
+            "productType": "fraud",
+            "url": "/helper/docs"
+        },
+        {
+            "menuDisplayOrder": 4,
+            "menuCode": "ams.user.baseinfo",
+            "name": "个人信息",
+            "menuId": "e22609a2890348daaed6d909358df9f2",
+            "isLeaf": 1,
+            "parentId": "2ca9d807f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/ams/user/baseinfo"
+        },
+        {
+            "menuDisplayOrder": 4,
+            "menuCode": "dvp",
+            "name": "报表中心",
+            "menuId": "2cbf5525f73811e5918600ffa2d7169d",
+            "isLeaf": 0,
+            "icon": "chart-column",
+            "parentId": "0",
+            "productType": "fraud",
+            "url": "/dvp"
+        },
+        {
+            "menuDisplayOrder": 4,
+            "menuCode": "control.case",
+            "name": "事中案件分析",
+            "menuId": "6777d2ac04604df8bdbda1b776c5cd10",
+            "isLeaf": 1,
+            "parentId": "2cb186f6f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/control/case"
+        },
+        {
+            "menuDisplayOrder": 4,
+            "menuCode": "helper.faq",
+            "name": "常见问题",
+            "menuId": "ea1a301d143b49de8de5620cfbdf532c",
+            "isLeaf": 1,
+            "parentId": "67c74272b18a4254b7bc1f010a15f14e",
+            "productType": "fraud",
+            "url": "/helper/faq"
+        },
+        {
+            "menuDisplayOrder": 5,
+            "menuCode": "control.caseafter",
+            "name": "事后案件分析",
+            "menuId": "2e8fd15f29db4605917ec53af12c1965",
+            "isLeaf": 1,
+            "parentId": "2cb186f6f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/control/caseafter"
+        },
+        {
+            "menuDisplayOrder": 5,
+            "menuCode": "helper",
+            "name": "帮助中心",
+            "menuId": "67c74272b18a4254b7bc1f010a15f14e",
+            "isLeaf": 0,
+            "icon": "help-w",
+            "parentId": "0",
+            "productType": "fraud",
+            "url": "/helper/"
+        },
+        {
+            "menuDisplayOrder": 5,
+            "menuCode": "control.listloc",
+            "name": "自定义名单",
+            "menuId": "7d0fc59c660344e784b31b2dc9d80ec4",
+            "isLeaf": 1,
+            "parentId": "2cbb06f9f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/control/listloc"
+        },
+        {
+            "menuDisplayOrder": 5,
+            "menuCode": "control.custevent",
+            "name": "自定义事件",
+            "menuId": "da435c911a4c42d987b4fae70060b12a",
+            "isLeaf": 1,
+            "parentId": "2cbb06f9f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/control/custevent"
+        },
+        {
+            "menuDisplayOrder": 5,
+            "menuCode": "ams.history",
+            "name": "登录历史",
+            "menuId": "1a9f50b10ad14c38b67c2d535f0b2325",
+            "isLeaf": 1,
+            "parentId": "2ca9d807f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/ams/history"
+        },
+        {
+            "menuDisplayOrder": 5,
+            "menuCode": "dvp.policyreport",
+            "name": "策略效率报表",
+            "menuId": "69b6887a8dac4509bf56b15e70c9bd5d",
+            "isLeaf": 1,
+            "parentId": "2cbf5525f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/dvp/policyreport"
+        },
+        {
+            "menuDisplayOrder": 6,
+            "menuCode": "ams.configuremanage",
+            "name": "配置管理",
+            "menuId": "95c626ce7e954bf5a0a6677c057149fb",
+            "isLeaf": 1,
+            "parentId": "2ca9d807f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/ams/configuremanage"
+        },
+        {
+            "menuDisplayOrder": 6,
+            "menuCode": "crn",
+            "name": "复杂关系网络",
+            "menuId": "4926175f557e4cfb9a82cdc8fcdd644f",
+            "isLeaf": 0,
+            "icon": "network-multi",
+            "parentId": "0",
+            "productType": "fraud",
+            "url": "/crn/"
+        },
+        {
+            "menuDisplayOrder": 6,
+            "menuCode": "dvp.dailyreport",
+            "name": "每日风险报表",
+            "menuId": "c6f08eab289a4d7c89219c785ee3dc04",
+            "isLeaf": 1,
+            "parentId": "2cbf5525f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/dvp/dailyreport"
+        },
+        {
+            "menuDisplayOrder": 6,
+            "menuCode": "control.blacklisttest",
+            "name": "风险名单测试",
+            "menuId": "41bc388f71624d7c952661060c25f4f3",
+            "isLeaf": 1,
+            "parentId": "2cb186f6f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/control/blacklisttest/"
+        },
+        {
+            "menuDisplayOrder": 7,
+            "menuCode": "control.enginetest",
+            "name": "策略规则测试",
+            "menuId": "1140fa420e664ef192fa3714488fa289",
+            "isLeaf": 1,
+            "parentId": "2cb186f6f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/control/enginetest"
+        },
+        {
+            "menuDisplayOrder": 7,
+            "menuCode": "dvp.riskthreshold",
+            "name": "风险阈值分布",
+            "menuId": "2ce08b99f73811e5918600ffa2d7169d",
+            "isLeaf": 1,
+            "parentId": "2cbf5525f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/dvp/riskthreshold"
+        },
+        {
+            "menuDisplayOrder": 8,
+            "menuCode": "control.rank",
+            "name": "TOP20排行榜",
+            "menuId": "b88f1363e78d42dc8d0287272df7485d",
+            "isLeaf": 1,
+            "parentId": "2cbf5525f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/control/rank"
+        },
+        {
+            "menuDisplayOrder": 8,
+            "menuCode": "control.contacts",
+            "name": "通讯录模型",
+            "menuId": "e61ecba0d6994e77a8ed0d85a6a9ecfc",
+            "isLeaf": 1,
+            "parentId": "2cb186f6f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/control/contacts"
+        },
+        {
+            "menuDisplayOrder": 8,
+            "menuCode": "dvp.partnercall",
+            "name": "接口调用统计",
+            "menuId": "dedd15cd565249f78a874f0da196617c",
+            "isLeaf": 1,
+            "parentId": "2cbf5525f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/dvp/partnercall"
+        },
+        {
+            "menuDisplayOrder": 9,
+            "menuCode": "control.reviewcode",
+            "name": "风险码管理",
+            "menuId": "8cc3b0f6679d4416bdfe6ee024113ff2",
+            "isLeaf": 1,
+            "parentId": "2cb186f6f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/control/reviewcode"
+        },
+        {
+            "menuDisplayOrder": 9,
+            "menuCode": "dvp.dimension",
+            "name": "维度统计报表",
+            "menuId": "7d02f813d2bb4836b2a2bf86ee40cdab",
+            "isLeaf": 1,
+            "parentId": "2cbf5525f73811e5918600ffa2d7169d",
+            "productType": "fraud",
+            "url": "/dvp/dimension"
+        },
+        {
+            "menuDisplayOrder": 9,
+            "menuCode": "ccp",
+            "name": "资信报告",
+            "menuId": "cd365cec73a74a9899c1cae1fac625d2",
+            "isLeaf": 0,
+            "parentId": "0",
+            "productType": "zx",
+            "url": "/ccp/",
+            "icon": "circle"
+        },
+        {
+            "menuDisplayOrder": 10,
+            "menuCode": "ccp.report",
+            "name": "报告列表",
+            "menuId": "a3b354c7bdca498683fa71554a51e71e",
+            "isLeaf": 1,
+            "parentId": "cd365cec73a74a9899c1cae1fac625d2",
+            "productType": "zx",
+            "url": "/ccp/report"
+        },
+        {
+            "menuDisplayOrder": 100,
+            "menuCode": "introduce",
+            "icon": "circle",
+            "name": "架构一览",
+            "menuId": "introduce-100",
+            "isLeaf": 0,
+            "parentId": "demo",
+            "productType": "demo",
+            "url": "/demo/introduce/"
+        },
+        {
+            "menuDisplayOrder": 101,
+            "menuCode": "introduce.directory_structure",
+            "name": "目录结构",
+            "menuId": "introduce-101",
+            "isLeaf": 1,
+            "parentId": "demo",
+            "productType": "demo",
+            "url": "/demo/introduce/directory_structure"
+        },
+        {
+            "menuDisplayOrder": 102,
+            "menuCode": "introduce.request_response",
+            "name": "请求响应",
+            "menuId": "introduce-102",
+            "isLeaf": 1,
+            "parentId": "demo",
+            "productType": "demo",
+            "url": "/demo/introduce/request_response"
+        },
+        {
+            "menuDisplayOrder": 110,
+            "menuCode": "icon",
+            "icon": "circle",
+            "name": "字体图标",
+            "menuId": "icon-110",
+            "isLeaf": 0,
+            "parentId": "demo",
+            "productType": "demo",
+            "url": "/demo/"
+        },
+        {
+            "menuDisplayOrder": 111,
+            "menuCode": "icon.wk",
+            "name": "WK",
+            "menuId": "icon-111",
+            "isLeaf": 1,
+            "parentId": "demo",
+            "productType": "demo",
+            "url": "/demo/icon/wk"
+        },
+        {
+            "menuDisplayOrder": 112,
+            "menuCode": "icon.ant",
+            "name": "ANT",
+            "menuId": "icon-112",
+            "isLeaf": 1,
+            "parentId": "demo",
+            "productType": "demo",
+            "url": "/demo/icon/ant"
+        },
+        {
+            "menuDisplayOrder": 113,
+            "menuCode": "form",
+            "icon": "circle",
+            "name": "表单相关",
+            "menuId": "form-113",
+            "isLeaf": 0,
+            "parentId": "demo",
+            "productType": "demo",
+            "url": "/demo/form"
+        },
+        {
+            "menuDisplayOrder": 114,
+            "menuCode": "form.input",
+            "name": "输入框",
+            "menuId": "icon-114",
+            "isLeaf": 1,
+            "parentId": "demo",
+            "productType": "demo",
+            "url": "/demo/form/input"
+        },
+        {
+            "menuDisplayOrder": 115,
+            "menuCode": "form.select",
+            "name": "选择器",
+            "menuId": "icon-115",
+            "isLeaf": 1,
+            "parentId": "demo",
+            "productType": "demo",
+            "url": "/demo/form/select"
+        },
+        {
+            "menuDisplayOrder": 116,
+            "menuCode": "form.tree",
+            "name": "树形控件",
+            "menuId": "icon-116",
+            "isLeaf": 1,
+            "parentId": "demo",
+            "productType": "demo",
+            "url": "/demo/form/tree"
+        },
+        {
+            "menuDisplayOrder": 117,
+            "menuCode": "form.checkbox",
+            "name": "多选框",
+            "menuId": "icon-117",
+            "isLeaf": 1,
+            "parentId": "demo",
+            "productType": "demo",
+            "url": "/demo/form/checkbox"
+        },
+        {
+            "menuDisplayOrder": 118,
+            "menuCode": "form.form",
+            "name": "表单",
+            "menuId": "icon-118",
+            "isLeaf": 1,
+            "parentId": "demo",
+            "productType": "demo",
+            "url": "/demo/form/form"
+        },{
+            "menuDisplayOrder": 119,
+            "menuCode": "form.datepicker",
+            "name": "时间选择器",
+            "menuId": "icon-119",
+            "isLeaf": 1,
+            "parentId": "demo",
+            "productType": "demo",
+            "url": "/demo/form/datepicker"
+        },
+        {
+            "menuDisplayOrder": 120,
+            "menuCode": "form.button",
+            "name": "按钮",
+            "menuId": "icon-120",
+            "isLeaf": 1,
+            "parentId": "demo",
+            "productType": "demo",
+            "url": "/demo/form/button"
+        },
+        {
+            "menuDisplayOrder": 121,
+            "menuCode": "prompt",
+            "icon": "circle",
+            "name": "提示框",
+            "menuId": "prompt-121",
+            "isLeaf": 0,
+            "parentId": "demo",
+            "productType": "demo",
+            "url": "/demo/prompt"
+        },
+        {
+            "menuDisplayOrder": 122,
+            "menuCode": "prompt.message",
+            "name": "全局提示",
+            "menuId": "prompt-122",
+            "isLeaf": 1,
+            "parentId": "demo",
+            "productType": "demo",
+            "url": "/demo/prompt/message"
+        },
+        {
+            "menuDisplayOrder": 123,
+            "menuCode": "prompt.tooltip",
+            "name": "文字提示",
+            "menuId": "prompt-123",
+            "isLeaf": 1,
+            "parentId": "demo",
+            "productType": "demo",
+            "url": "/demo/prompt/tooltip"
+        },
+        {
+            "menuDisplayOrder": 124,
+            "menuCode": "prompt.modal",
+            "name": "对话框",
+            "menuId": "prompt-124",
+            "isLeaf": 1,
+            "parentId": "demo",
+            "productType": "demo",
+            "url": "/demo/prompt/modal"
+        },
+        {
+            "menuDisplayOrder": 125,
+            "menuCode": "other",
+            "icon": "circle",
+            "name": "其他",
+            "menuId": "other-125",
+            "isLeaf": 0,
+            "parentId": "demo",
+            "productType": "demo",
+            "url": "/demo/other"
+        },
+        {
+            "menuDisplayOrder": 126,
+            "menuCode": "other.addField",
+            "icon": "circle",
+            "name": "添加字段",
+            "menuId": "addField-126",
+            "isLeaf": 1,
+            "parentId": "demo",
+            "productType": "demo",
+            "url": "/demo/other/addField"
+        },
+        {
+            "menuDisplayOrder": 127,
+            "menuCode": "other.grid",
+            "icon": "circle",
+            "name": "栅格",
+            "menuId": "grid-126",
+            "isLeaf": 1,
+            "parentId": "demo",
+            "productType": "demo",
+            "url": "/demo/other/grid"
+        },
+        {
+            "menuDisplayOrder": 128,
+            "menuCode": "other.table",
+            "icon": "circle",
+            "name": "表格",
+            "menuId": "table-128",
+            "isLeaf": 1,
+            "parentId": "demo",
+            "productType": "demo",
+            "url": "/demo/other/table"
+        }
+    ]
+}

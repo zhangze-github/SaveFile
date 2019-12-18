@@ -1,0 +1,74 @@
+{
+  "name": "ze.zhang-20190710",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "export NODE_ENV='build'&& node ./build/start.js",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server",
+    "dev": "export NODE_ENV='development' && node ./build/start.js "
+  },
+  "babel": {
+    "plugins": [
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ]
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.0",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/preset-env": "^7.5.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-import": "^1.12.0",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-app": "^9.0.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.0.0",
+    "file-loader": "^4.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
+    "px2rem-loader": "^0.1.9",
+    "raw-loader": "^3.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-hot-loader": "^4.12.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^2.1.0",
+    "watch": "^1.0.2",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "antd": "^3.20.3",
+    "antd-mobile": "^2.2.14",
+    "classnames": "^2.2.6",
+    "jquery": "^3.4.1",
+    "md5": "^2.2.1",
+    "qs": "^6.7.0",
+    "react": "^16.8.6",
+    "react-loadable": "^5.5.0",
+    "react-redux": "^5.1.0",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0",
+    "simple-pinyin": "^3.0.2"
+  }
+}

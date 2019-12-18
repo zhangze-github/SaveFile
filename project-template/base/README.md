@@ -1,0 +1,1 @@
+## 项目中图片通过CDN引入 ，所以不参与打包过程 配置了devServer ，初步配置了React 和 Babel ，React模块热加载。 
