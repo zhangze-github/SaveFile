@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    /**
+     * 参数：[socketOpen|socketClose|socketMessage|socketError] = func，[socket连接成功时触发|连接关闭|发送消息|连接错误]
+     * forever：连接关闭后是否重连
+     * maxConnect：最大重连次数，为always就一直重连
+     * timeout：连接超时时间
+     * @type {module.webSocket}
+     */
+class SocketClass{
+    constructor(params){
+        this.params = params;
+        const NOOP = () => {};
+        let {url, name = 'default', socketOpen = NOOP, msgCbk = NOOP} = params;
+        this.url = url;
+        this.msgCbk = msgCbk;
+        this.socketOpen = socketOpen;
+        this.name = name;
+        this.ws = null;  // websocket对象
+        this.status = ''; // websocket是否被手动关闭
+        this.pingPong = '';
+        this.pingInterval = null;
+        this.pongInterval = null;
+        this.reConnectTime = 1; // 重连限制时间 minuit
+        this.firsReConnectTime = ''; // 内部用 记录第一次重连时间
+        this.reConnectCount = 0; // 内部用 当前时间段内已经重连次数
+        this.reConnectMaxCount = 5; // 重连限制时间内的最大重连次数,
+        this.reConnectFlag = false; // 超过次数限制 正在等待重连的标志位
+    }
+    connect(firstData) {
+        this.ws = new WebSocket(this.url);
+        this.ws.onopen = e => {
+            this.status = 'open';
+            this.heartCheck();
+            this.socketOpen();
+            if (firstData) {
+                this.ws.send(firstData);
+            }
+        };
+        this.ws.onmessage = e => {
+            if (e.data === 'ping') {
+                this.pingPong = 'pong';
+            }
+            return this.msgCbk(e.data);
+        };
+        this.ws.onclose = e => {
+            console.warn('close');
+            this.closeHandle(e);
+        };
+        this.ws.onerror = e => {
+            console.warn('error');
+            this.closeHandle(e);
+        }
+    }
+    sendMessage(data) {
+        if(this.ws.readyState === 1){
+            this.ws.send(data);
+            return true;
+        }
+        return false;
+    }
+    heartCheck() {
+        this.pingPong = 'ping';
+        this.pingInterval = setInterval(() => {
+            if (this.ws.readyState === 1) {
+                this.ws.send('ping');
+            }
+        }, 10000);
+        this.pongInterval = setInterval(() => {
+            if (this.pingPong === 'pong') {
+                this.closeHandle('pingPong没有改变为pong');
+            }
+            this.pingPong = 'ping'
+        }, 20000)
+    }
+    closeHandle(e = 'err') {
+        if (this.status === 'close') {
+            console.log(`${this.name}websocket手动关闭`)
+            return;
+        }
+        if(!this.firsReConnectTime){
+            this.firsReConnectTime = new Date().getTime();
+        }
+        if((new Date().getTime() - this.firsReConnectTime) < this.reConnectTime * 60 * 1000){
+            if(this.reConnectCount < (this.reConnectMaxCount - 1) ){
+                this.reConnectCount ++;
+            }else{
+                if(!this.reConnectFlag){
+                    console.warn('一分钟内重连超过五次, 取消重连');
+                    this.reConnectFlag = true;
+                    setTimeout(() => {
+                        this.connect();
+                        this.reConnectFlag = false;
+                    }, 60000);
+                }
+                return;
+            }
+        }else{
+            this.reConnectCount = 0;
+            this.firsReConnectTime = new Date().getTime();
+        }
+        if (this.pingInterval !== undefined && this.pongInterval !== undefined) {
+            clearInterval(this.pingInterval);
+            clearInterval(this.pongInterval);
+        }
+        this.connect();
+    }
+    closeSocket() {
+        this.status = 'close';
+        return this.ws.close();
+    }
+}
+
+
+
+msgCbk = (msg) => {
+    console.warn(msg);
+};
+const wsValue = new SocketClass({
+    // url: 'ws://123.207.136.134:9010/ajaxchattest',
+    url: 'ws://127.0.0.1:8080',
+    msgCbk,
+});
+wsValue.connect('立即与服务器通信'); // 连接服务器
+let i = 0;
+setInterval(() => {
+    i++;
+    // console.warn(wsValue.sendMessage(`传消息给服务器${i}`));
+    // wsValue.sendMessage(`传消息给服务器${i}`);
+}, 1000);
+
+
+
+
+
+
+
+
+
+
+
+
+    class WebSocketClass {
+        /**
+         * @description: 初始化实例属性，保存参数
+         * @param {String} url ws的接口
+         * @param {Function} msgCallback 服务器信息的回调传数据给函数
+         * @param {String} name 可选值 用于区分ws，用于debugger
+         */
+        constructor(url, msgCallback, name = 'default') {
+            this.url = url;
+            this.msgCallback = msgCallback;
+            this.name = name;
+            this.ws = null;  // websocket对象
+            this.status = null; // websocket是否关闭
+        }
+        /**
+         * @description: 初始化 连接websocket或重连webSocket时调用
+         * @param {*} 可选值 要传的数据
+         */
+        connect(data) {
+            // 新建 WebSocket 实例
+            this.ws = new WebSocket(this.url);
+            this.ws.onopen = e => {
+                // 连接ws成功回调
+                this.status = 'open';
+                console.log(`${this.name}连接成功`, e);
+                this.heartCheck();
+                if (data !== undefined) {
+                    // 有要传的数据,就发给后端
+                    return this.ws.send(data);
+                }
+            }
+            // 监听服务器端返回的信息
+            this.ws.onmessage = e => {
+                // 把数据传给回调函数，并执行回调
+                console.warn(e.data);
+                if (e.data === 'ping') {
+                    this.pingPong = 'pong'; // 服务器端返回pong,修改pingPong的状态
+                }
+                return this.msgCallback(e.data);
+            }
+            // ws关闭回调
+            this.ws.onclose = e => {
+                console.warn('close');
+                this.closeHandle(e); // 判断是否关闭
+            }
+            // ws出错回调
+            this.ws.onerror = e => {
+                console.warn('error');
+                this.closeHandle(e); // 判断是否关闭
+            }
+        }
+        heartCheck() {
+            // 心跳机制的时间可以自己与后端约定
+            this.pingPong = 'ping'; // ws的心跳机制状态值
+            this.pingInterval = setInterval(() => {
+                if (this.ws.readyState === 1) {
+                    // 检查ws为链接状态 才可发送
+                    this.ws.send('ping'); // 客户端发送ping
+                }
+            }, 3000)
+            this.pongInterval = setInterval(() => {
+                if (this.pingPong === 'pong') {
+                    this.closeHandle('pingPong没有改变为pong'); // 没有返回pong 重启webSocket
+                }
+                // 重置为ping 若下一次 ping 发送失败 或者pong返回失败(pingPong不会改成pong)，将重启
+                console.log('返回pong');
+                this.pingPong = 'ping'
+            }, 10000)
+        }
+        // 发送信息给服务器
+        sendHandle(data) {
+            console.log(`${this.name}发送消息给服务器:`, data);
+            return this.ws.send(data);
+        }
+        closeHandle(e = 'err') {
+            // 因为webSocket并不稳定，规定只能手动关闭(调closeMyself方法)，否则就重连
+            if (this.status !== 'close') {
+                console.log(`${this.name}断开，重连websocket`, e)
+                if (this.pingInterval !== undefined && this.pongInterval !== undefined) {
+                    // 清除定时器
+                    clearInterval(this.pingInterval);
+                    clearInterval(this.pongInterval);
+                }
+                this.connect(); // 重连
+            } else {
+                console.log(`${this.name}websocket手动关闭`)
+            }
+        }
+        // 手动关闭WebSocket
+        closeMyself() {
+            console.log(`关闭${this.name}`)
+            this.status = 'close';
+            return this.ws.close();
+        }
+    }
+    function someFn(data) {
+        console.log('接收服务器消息的回调：', data);
+    }
+    // const wsValue = new WebSocketClass('ws://121.40.165.18:8800', someFn, 'socketTest'); // 这个链接一天只能发送消息50次
+    // const wsValue = new WebSocketClass('wss://echo.websocket.org', someFn, 'wsName'); // 阮一峰老师教程链接
+    // const wsValue = new WebSocketClass('ws://123.207.136.134:9010/ajaxchattest', someFn, 'socketTest'); // 这个链接一天只能发送消息50次
+    //
+    // wsValue.connect('立即与服务器通信'); // 连接服务器
+    // setTimeout(() => {
+    //     wsValue.sendHandle('传消息给服务器')
+    // }, 1000);
+
+
+</script>
+
+</body>
+</html>
