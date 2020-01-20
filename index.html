@@ -55,11 +55,11 @@ class SocketClass{
         };
         this.ws.onclose = e => {
             console.warn('close');
-            this.closeHandle(e);
+            // this.closeHandle(e);
         };
         this.ws.onerror = e => {
             console.warn('error');
-            this.closeHandle(e);
+            // this.closeHandle(e);
         }
     }
     sendMessage(data) {
@@ -73,9 +73,17 @@ class SocketClass{
         this.pingPong = 'ping';
         this.pingInterval = setInterval(() => {
             if (this.ws.readyState === 1) {
+
+                let obj ={
+                    context: "",
+                    deviceCode: "f6e66a9c77223947cdaad3ecbb5852e3",
+                    eventType: "PING",
+                    fromUserId: "dazaZnW079"
+                }
+
                 this.ws.send('ping');
             }
-        }, 10000);
+        }, 3000);
         this.pongInterval = setInterval(() => {
             if (this.pingPong === 'pong') {
                 this.closeHandle('pingPong没有改变为pong');
@@ -127,11 +135,11 @@ msgCbk = (msg) => {
     console.warn(msg);
 };
 const wsValue = new SocketClass({
-    // url: 'ws://123.207.136.134:9010/ajaxchattest',
-    url: 'ws://127.0.0.1:8080',
+    url: 'ws://beetalk-a.beta.11bee.com/websocket',
+    // url: 'ws://10.64.16.181:20889/websocket',
     msgCbk,
 });
-wsValue.connect('立即与服务器通信'); // 连接服务器
+wsValue.connect(''); // 连接服务器
 let i = 0;
 setInterval(() => {
     i++;
