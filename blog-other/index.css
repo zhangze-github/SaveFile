@@ -129,7 +129,7 @@
     left: 0;
     bottom: 0;
     margin-left: -35%;
-    margin-bottom: -50px;
+    margin-bottom: -27px;
     width: 110%;
     opacity: .85;
 }
@@ -3396,7 +3396,7 @@ h3,
 .h3,
 h4,
 .h4 {
-    margin: 30px 0 0;
+    margin: 18px 0 0 0;
 }
 
 h1,
@@ -7180,15 +7180,15 @@ License - nucleoapp.com/license/
     position: relative;
 }
 
-.fog-low {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    margin-left: -35%;
-    margin-bottom: -50px;
-    width: 110%;
-    opacity: .85;
-}
+/*.fog-low {*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    bottom: 0;*/
+/*    margin-left: -35%;*/
+/*    margin-bottom: -50px;*/
+/*    width: 110%;*/
+/*    opacity: .85;*/
+/*}*/
 
 .fog-low img {
     width: 100%;
