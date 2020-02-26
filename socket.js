@@ -3,7 +3,7 @@
 // // 2 创建服务器
 // let clientArr = [];
 // const server = net.createServer();
-// // 3 绑定链接事件
+// // 3 绑定链接还事件
 // server.on('connection',(person)=>{
 //     console.log(clientArr.length);
 // // 记录链接的进程
