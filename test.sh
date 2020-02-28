@@ -53,16 +53,17 @@
 
 
 #!/bin/bash
-echo '----------执行 git pull----------'
+echo '----------执行 git pull'
 git pull
-echo '----------执行 git status----------'
+echo '----------执行 git status'
 git status
-echo '----------执行 git add .----------'
+echo '----------执行 git add .'
 git add .
-echo '----------执行 git commit -m ' $1 '----------'
+echo '----------执行 git commit -m ' $1 ''
 git commit -m $1
-echo '----------执行 git push----------'
+echo '----------执行 git push'
 git push
+echo '----------push 完成'
 
 
 
