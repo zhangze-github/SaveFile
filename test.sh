@@ -61,6 +61,9 @@ echo '----------执行 git add .----------'
 git add .
 echo '----------执行 git commit -m ' $1 '----------'
 git commit -m $1
+echo '----------执行 git push----------'
+git push
+
 
 
 
