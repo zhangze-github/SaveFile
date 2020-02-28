@@ -47,11 +47,6 @@
 
 
 
-
-
-
-
-
 #!/bin/bash
 echo '----------执行 git pull'
 git pull
