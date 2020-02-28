@@ -28,4 +28,4 @@
 
 console.warn('test');
 
-console.warn(process);
+console.warn(process.env);
