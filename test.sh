@@ -48,7 +48,6 @@
 
 
 #!/bin/bash
-echo $0
 echo '----------执行 git pull'
 git pull
 echo '----------执行 git status'
