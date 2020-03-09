@@ -25,9 +25,6 @@ function test (){
 
 setInterval(test, 5000);
 
-
-console.warn(process.env.test);
-
 //
 //
 //
